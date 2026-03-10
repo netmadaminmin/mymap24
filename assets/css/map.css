@@ -1,0 +1,125 @@
+/* =========================
+   MAP PAGE (FULL SCREEN)
+   ใช้กับหน้าแผนที่เต็มจอ (เช่น p1)
+========================= */
+
+/* ปิด scroll เฉพาะหน้า map */
+body.map-page {
+  overflow: hidden;
+  background: #020409;
+}
+
+.map-page {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 72px);
+}
+
+/* Leaflet map เต็มจอ */
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================
+   MAP UI COMPONENTS
+   Toolbar / Legend
+========================= */
+
+/* Toolbar */
+.map-toolbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 14px 18px;
+  border-radius: 14px;
+  color: #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+}
+
+.map-toolbar label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.map-toolbar select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Legend */
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 16px 18px;
+  border-radius: 16px;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================
+   MAP CONTAINER (GENERIC)
+   ใช้เป็น wrapper ถ้ามี
+========================= */
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================
+   DASHBOARD MAPS
+   ใช้กับหน้า KPI / Analysis
+========================= */
+
+/* NIC MAP (Page p2 / p1 dashboard) */
+#nic-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+/* NACp MAP (Page p2) */
+#nacp-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+#nacv-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+/* PIC MAP (Page p4) */
+#pic-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+
+/* =========================
+   LEAFLET SAFETY
+   กันกรณีแผนที่ไม่เต็ม container
+========================= */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
